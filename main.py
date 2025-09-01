@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-# HelinaBot - Rose-like lightweight version
+# HelinaBot - Rose-like lightweight version (secure version with env token)
 
+import os
 import logging
 from telegram import (
     Update, InlineKeyboardButton, InlineKeyboardMarkup, ChatPermissions
@@ -10,8 +11,10 @@ from telegram.ext import (
     MessageHandler, Filters, CallbackContext
 )
 
-# --- BOT TOKEN ---
-BOT_TOKEN = "8491430292:AAFoHzc8cVF3hXZyxhxd3H0-MkamChi6cX8"
+# --- BOT TOKEN from Environment Variable ---
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("⚠️ BOT_TOKEN not set! Please configure environment variable.")
 
 # --- LINKS (change to your real ones) ---
 OUR_CHANNELS_LINK = "https://t.me/YourChannelLink"
