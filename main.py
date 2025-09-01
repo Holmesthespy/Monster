@@ -46,8 +46,11 @@ SUBJECTS = {
 }
 
 FAMILY_CHANNELS = [
-    ("Main Channel", "https://t.me/your_real_channel"),
-    ("Study Channel", "https://t.me/your_other_channel"),
+    ("English Channel", "https://t.me/English_Seeker"),
+    ("Maths Channel", 
+"https://t.me/MATHS_X"),
+    ("Defence Channel", "https://t.me/GUARDIAN_ZONE"),
+    ("Discussion Group", "https://t.me/Defence_Platoon"),
 ]
 
 # ---------------- Logging ----------------
